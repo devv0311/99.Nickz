@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.centered-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    opacity: 1;
+    animation: fadeOutText 1s forwards;
+}
+
+.fullscreen-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('rb.png');
+    background-size: contain;
+    background-position: center;
+    opacity: 0;
+    animation: fadeInImage 1s forwards;
+    animation-delay: 1s;
+}
+
+.button-container {
+    position: fixed;
+    bottom: 155px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 20;
+    opacity: 0;
+    animation: fadeInButtons 1s forwards;
+    animation-delay: 1s;
+}
+
+.pill-button {
+    width: 50px;
+    height: 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.red-button {
+    background-color: red;
+    transform: translateX(-250px) rotate(-45deg);
+}
+
+.blue-button {
+    background-color: blue;
+    transform: translateX(210px) rotate(45deg);
+}
+
+@keyframes fadeOutText {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeInImage {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInButtons {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Fade-out animation for the fullscreen image and buttons */
+@keyframes fadeOutBackground {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Initially hide the second message */
+.hidden-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    text-align: center;
+    max-width: 80%;
+    margin-top: 20px;
+    display: none; /* Hide the second message initially */
+}
+
+/* Show message when fade-out completes */
+.show-message {
+    display: block;  /* Show the second message */
+    opacity: 1;      /* Fade it in */
+    animation: fadeInMessage 1s forwards;  /* Use a fade-in animation */
+}
+
+@keyframes fadeInMessage {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Go Back Button */
+.go-back-button {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: transparent;  /* Make the background transparent */
+    color: white;  /* Keep the text color white */
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    border: 2px solid white;  /* Add a white border to make the button visible */
+    cursor: pointer;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.5s;
+    z-index: 25;
+}
+
+/* Show Go Back Button when message is shown */
+.show-go-back-button {
+    opacity: 1; /* Make it visible */
+}

@@ -1,0 +1,77 @@
+/* Basic body styling with black background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #f4f4f4; /* Light text color for contrast */
+}
+
+/* Header styling */
+.page-header {
+    text-align: center;
+    padding: 20px;
+    color: #f4f4f4;
+    background-color: #222; /* Dark gray for header */
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #66ccff; /* Light blue */
+    color: #000;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #33aaff; /* Darker blue when hovered */
+}
+
+/* Content section styling */
+.content-detail {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Content title and description */
+.content-info h2 {
+    font-size: 2rem;
+    color: #66ccff;
+    margin-bottom: 20px;
+}
+
+.content-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Media (video or image) styling */
+.media video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Additional info section */
+.additional-info p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 10px 0;
+}
+
+.additional-info strong {
+    color: #66ccff; /* Light blue for labels */
+}

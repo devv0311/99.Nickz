@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Detail</title>
+    <link rel="stylesheet" href="css/content_detail.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Content Detail</h1>
+    </header>
+
+    <main class="content-detail">
+        <!-- Back Button -->
+        <a href="content_list.html" class="back-button">Back to Content List</a>
+
+        <!-- Content Information -->
+        <section class="content-info">
+            <!-- Title and Description -->
+            <h2 id="content-title">Content Title</h2>
+            <p id="content-description" class="content-description">Description of the content will be displayed here.</p>
+
+            <!-- Media (video or image) -->
+            <div class="media">
+                <video id="content-video" controls>
+                    <source id="video-source" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Additional Information (Author, Category) -->
+            <div class="additional-info">
+                <p><strong>Author:</strong> <span id="content-author">99.Nickz</span></p>
+                <p><strong>Category:</strong> <span id="content-category">Content Category</span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/content_detail.js"></script>
+</body>
+</html>
